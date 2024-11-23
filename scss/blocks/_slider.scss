@@ -1,0 +1,95 @@
+.slider-tattoo {
+   margin-bottom: 120px;
+   max-width: 600px;
+   margin: 0 auto;
+   position: relative;
+};
+.slider-tatto-block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 121px;
+   &__title {
+   display: inline-flex;
+   column-gap: 30px;
+   align-items: center;
+    color: $color-black;
+    font-family: "Monserrat-Medium";
+    font-size: clamp(1.5rem, 1.141rem + 1.47vw, 3rem);//48px
+    font-weight: 500;
+    @media (max-width: 395px) {
+      column-gap: 15px;
+      
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+       background-color: $color-black;
+   
+    }
+    &::before {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+       background-color: $color-black;
+    }
+}
+};
+.slider-container {
+
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.slider {
+width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slider__img {
+    border-radius: 10px;
+  };
+ 
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: $color-black;
+    @media (max-width: 760px) {
+      top: 110%;
+      
+    }
+    &:hover {
+      background-color: transparent; 
+    }
+ 
+    
+  }
+  
+  .prev-button {
+    left: -13%;
+    @media (max-width: 760px) {
+      left: 15%;
+      
+    }
+  }
+  
+  .next-button {
+    right: -10%; 
+    @media (max-width: 760px) {
+      right: 15%;
+      
+    }
+  }
